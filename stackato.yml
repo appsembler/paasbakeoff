@@ -10,6 +10,10 @@ requirements:
   pypm:
     - pillow
     - psycopg2
+hooks:
+  post-staging:
+    - python mywebsite/manage.py syncdb --noinput
+    - python mywebsite/manage.py collectstatic --noinput
 env:
   DJANGO_SETTINGS_MODULE: mywebsite.settings
 processes:
