@@ -13,3 +13,7 @@ env:
   DJANGO_SETTINGS_MODULE: mywebsite.settings
 processes:
   web: $STACKATO_UWSGI --static-map /static=$HOME/mywebsite/static
+ignores: 
+  - .git
+  - mywebsite/dev.db
+  - mywebsite/local_settings.py
