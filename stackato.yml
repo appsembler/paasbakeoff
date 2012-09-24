@@ -2,6 +2,7 @@ name: paasbakeoff
 instances: 1
 framework:
   type: python
+  home-dir: app
 mem: 128
 services:
   postgresql-cf691: postgresql
@@ -10,3 +11,5 @@ requirements:
     - pillow
 env:
   DJANGO_SETTINGS_MODULE: mywebsite.settings
+processes:
+  web: $STACKATO_UWSGI --static-map /static=$HOME/mywebsite/static
