@@ -1,0 +1,8 @@
+name: paasbakeoff
+instances: 1
+framework:
+  type: python
+mem: 128
+services:
+  postgresql-cf691: postgresql
+
