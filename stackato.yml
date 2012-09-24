@@ -8,3 +8,5 @@ services:
 requirements:
   pypm:
     - pillow
+env:
+  DJANGO_SETTINGS_MODULE: mywebsite.settings
