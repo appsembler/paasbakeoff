@@ -7,4 +7,4 @@ services:
   postgresql-cf691: postgresql
 requirements:
   pypm:
-	- pillow
+    - pillow
