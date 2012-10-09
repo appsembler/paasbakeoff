@@ -6,10 +6,12 @@ framework:
 mem: 128
 services:
   postgresql-cf691: postgresql
+  memcached-paasbakeoff: memcached
 requirements:
   pypm:
     - pillow
     - psycopg2
+    - python-memcached
 hooks:
   post-staging:
     - python mywebsite/manage.py syncdb --noinput

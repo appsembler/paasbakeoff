@@ -193,6 +193,17 @@ else:
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
         }
 
+##########
+# CACHES #
+##########
+
+if 'MEMCACHE_URL' in os.environ:
+    CACHES = {
+        'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION': os.getenv('MEMCACHE_URL'),
+        }
+    }
 
 #########
 # PATHS #
