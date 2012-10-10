@@ -7,6 +7,7 @@ mem: 128
 services:
   postgresql-cf691: postgresql
   memcached-paasbakeoff: memcached
+  filesystem-paasbakeoff: filesystem
 requirements:
   pypm:
     - pillow
