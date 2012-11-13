@@ -173,30 +173,28 @@ STATICFILES_FINDERS = (
 
 DATABASES = {}
 if 'OPENSHIFT_MYSQL_DB_URL' in os.environ:
-    url = urlparse.urlparse(os.environ['OPENSHIFT_MYSQL_DB_URL'])
+    url = urlparse.urlparse(os.environ.get('OPENSHIFT_MYSQL_DB_URL'))
 
     DATABASES['default'] = {
+        'ENGINE' : 'django.db.backends.mysql',
         'NAME': url.path[1:],
         'USER': url.username,
         'PASSWORD': url.password,
         'HOST': url.hostname,
         'PORT': url.port,
         }
-
-    DATABASES['default']['ENGINE'] = 'django.db.backends.mysql'
 
 elif 'OPENSHIFT_POSTGRESQL_DB_URL' in os.environ:
-    url = urlparse.urlparse(os.environ['OPENSHIFT_POSTGRESQL_DB_URL'])
+    url = urlparse.urlparse(os.environ.get('OPENSHIFT_POSTGRESQL_DB_URL'))
 
     DATABASES['default'] = {
+        'ENGINE' : 'django.db.backends.postgresql_psycopg2',
         'NAME': url.path[1:],
         'USER': url.username,
         'PASSWORD': url.password,
         'HOST': url.hostname,
         'PORT': url.port,
         }
-
-    DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
 
 else:
     DATABASES['default'] = {
@@ -212,8 +210,6 @@ else:
 #########
 # PATHS #
 #########
-
-import os
 
 # Full filesystem path to the project.
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
