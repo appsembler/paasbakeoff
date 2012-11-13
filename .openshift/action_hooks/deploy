@@ -10,6 +10,9 @@ export PYTHON_EGG_CACHE=$OPENSHIFT_HOME_DIR/python-2.6/virtenv/lib/python-2.6/si
 
 echo "Executing 'python ${OPENSHIFT_REPO_DIR}mywebsite/manage.py syncdb --noinput'"
 python "$OPENSHIFT_REPO_DIR"mywebsite/manage.py syncdb --noinput
- 
+
+echo "Executing 'python ${OPENSHIFT_REPO_DIR}mywebsite/manage.py make_admin'"
+python "$OPENSHIFT_REPO_DIR"mywebsite/manage.py make_admin
+
 echo "Executing 'python ${OPENSHIFT_REPO_DIR}mywebsite/manage.py collectstatic --noinput -v0'"
 python "$OPENSHIFT_REPO_DIR"mywebsite/manage.py collectstatic --noinput -v0
