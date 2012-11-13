@@ -177,7 +177,7 @@ if 'OPENSHIFT_MYSQL_DB_URL' in os.environ:
 
     DATABASES['default'] = {
         'ENGINE' : 'django.db.backends.mysql',
-        'NAME': url.path[1:],
+        'NAME': os.environ['OPENSHIFT_APP_NAME'],
         'USER': url.username,
         'PASSWORD': url.password,
         'HOST': url.hostname,
@@ -189,7 +189,7 @@ elif 'OPENSHIFT_POSTGRESQL_DB_URL' in os.environ:
 
     DATABASES['default'] = {
         'ENGINE' : 'django.db.backends.postgresql_psycopg2',
-        'NAME': url.path[1:],
+        'NAME': os.environ['OPENSHIFT_APP_NAME'],
         'USER': url.username,
         'PASSWORD': url.password,
         'HOST': url.hostname,
