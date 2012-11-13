@@ -171,7 +171,6 @@ STATICFILES_FINDERS = (
 
 DATABASES = {}
 if 'OPENSHIFT_MYSQL_DB_URL' in os.environ:
-    DATABASES['default']['ENGINE'] = 'django.db.backends.mysql'
     url = urlparse.urlparse(os.environ['OPENSHIFT_MYSQL_DB_URL'])
 
     DATABASES['default'] = {
@@ -182,8 +181,9 @@ if 'OPENSHIFT_MYSQL_DB_URL' in os.environ:
         'PORT': url.port,
         }
 
+    DATABASES['default']['ENGINE'] = 'django.db.backends.mysql'
+
 elif 'OPENSHIFT_POSTGRESQL_DB_URL' in os.environ:
-    DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
     url = urlparse.urlparse(os.environ['OPENSHIFT_POSTGRESQL_DB_URL'])
 
     DATABASES['default'] = {
@@ -193,6 +193,8 @@ elif 'OPENSHIFT_POSTGRESQL_DB_URL' in os.environ:
         'HOST': url.hostname,
         'PORT': url.port,
         }
+
+    DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
 
 else:
     DATABASES['default'] = {
