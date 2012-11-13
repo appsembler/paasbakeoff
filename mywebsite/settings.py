@@ -169,8 +169,12 @@ STATICFILES_FINDERS = (
 
 
 DATABASES = {}
-if 'OPENSHIFT_DB_URL' in os.environ:
-    url = urlparse.urlparse(os.environ['DATABASE_URL'])
+if 'OPENSHIFT_MYSQL_DB_URL' or 'OPENSHIFT_POSTGRESQL_DB_URL' in os.environ:
+    if 'OPENSHIFT_MYSQL_DB_URL' in os.environ:
+        url = urlparse.urlparse(os.environ['OPENSHIFT_MYSQL_DB_URL'])
+    elif 'OPENSHIFT_POSTGRESQL_DB_URL' in os.environ:
+        url = urlparse.urlparse(os.environ['OPENSHIFT_POSTGRESQL_DB_URL'])
+
     DATABASES['default'] = {
         'NAME': url.path[1:],
         'USER': url.username,
