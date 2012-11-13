@@ -183,7 +183,6 @@ if 'OPENSHIFT_MYSQL_DB_URL' in os.environ:
         'HOST': url.hostname,
         'PORT': url.port,
         }
-
 elif 'OPENSHIFT_POSTGRESQL_DB_URL' in os.environ:
     url = urlparse.urlparse(os.environ.get('OPENSHIFT_POSTGRESQL_DB_URL'))
 
@@ -195,7 +194,6 @@ elif 'OPENSHIFT_POSTGRESQL_DB_URL' in os.environ:
         'HOST': url.hostname,
         'PORT': url.port,
         }
-
 else:
     DATABASES['default'] = {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
