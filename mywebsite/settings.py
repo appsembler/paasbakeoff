@@ -169,13 +169,12 @@ STATICFILES_FINDERS = (
 # DATABASES #
 #############
 
+# TODO: clean up this code so it's less verbose
 
 DATABASES = {}
-if 'OPENSHIFT_MYSQL_DB_URL' or 'OPENSHIFT_POSTGRESQL_DB_URL' in os.environ:
-    if 'OPENSHIFT_MYSQL_DB_URL' in os.environ:
-        url = urlparse.urlparse(os.environ['OPENSHIFT_MYSQL_DB_URL'])
-    elif 'OPENSHIFT_POSTGRESQL_DB_URL' in os.environ:
-        url = urlparse.urlparse(os.environ['OPENSHIFT_POSTGRESQL_DB_URL'])
+if 'OPENSHIFT_MYSQL_DB_URL' in os.environ:
+    DATABASES['default']['ENGINE'] = 'django.db.backends.mysql'
+    url = urlparse.urlparse(os.environ['OPENSHIFT_MYSQL_DB_URL'])
 
     DATABASES['default'] = {
         'NAME': url.path[1:],
@@ -184,10 +183,19 @@ if 'OPENSHIFT_MYSQL_DB_URL' or 'OPENSHIFT_POSTGRESQL_DB_URL' in os.environ:
         'HOST': url.hostname,
         'PORT': url.port,
         }
-    if url.scheme == 'postgres':
-        DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
-    elif url.scheme == 'mysql':
-        DATABASES['default']['ENGINE'] = 'django.db.backends.mysql'
+
+elif 'OPENSHIFT_POSTGRESQL_DB_URL' in os.environ:
+    DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
+    url = urlparse.urlparse(os.environ['OPENSHIFT_POSTGRESQL_DB_URL'])
+
+    DATABASES['default'] = {
+        'NAME': url.path[1:],
+        'USER': url.username,
+        'PASSWORD': url.password,
+        'HOST': url.hostname,
+        'PORT': url.port,
+        }
+
 else:
     DATABASES['default'] = {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
