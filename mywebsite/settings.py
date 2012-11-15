@@ -342,6 +342,35 @@ DEBUG_TOOLBAR_CONFIG = {"INTERCEPT_REDIRECTS": False}
 #     "ADMIN_PASS": "", # Live admin user password
 # }
 
+# Heroku settings
+
+if environ.get("RACK_ENV", None) == "production":
+    import dj_database_url
+    
+    DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
+    INSTALLED_APPS += ("gunicorn",)
+    # from http://offbytwo.com/2012/01/18/deploying-django-to-heroku.html
+    # To make it easier to turn DEBUG on and off consider adding the following to your settings.py:
+    DEBUG = bool(os.environ.get('DJANGO_DEBUG', ''))
+    TEMPLATE_DEBUG = DEBUG
+    # Now you can turn debug on using heroku config:add DJANGO_DEBUG=true 
+    # and turn it off with heroku config:remove DJANGO_DEBUG
+
+    EMAIL_HOST = 'smtp.sendgrid.net'
+    EMAIL_HOST_USER = os.environ['SENDGRID_USERNAME']
+    EMAIL_HOST_PASSWORD = os.environ['SENDGRID_PASSWORD']
+    EMAIL_PORT = 587        # 25, 587, 2525 and 465 on ssl
+    EMAIL_USE_TLS = True  
+
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_STORAGE_BUCKET_NAME = 'mywebsite-files'
+
+    STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+
+    STATIC_URL = 'http://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/'
+    MEDIA_URL = 'http://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/'
 
 ##################
 # LOCAL SETTINGS #
