@@ -344,7 +344,7 @@ DEBUG_TOOLBAR_CONFIG = {"INTERCEPT_REDIRECTS": False}
 
 # Heroku settings
 
-if environ.get("RACK_ENV", None) == "production":
+if os.environ.get("RACK_ENV", None) == "production":
     import dj_database_url
     
     DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
