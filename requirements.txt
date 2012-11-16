@@ -1,0 +1,3 @@
+-r mywebsite/requirements/project.txt
+psycopg2
+South
