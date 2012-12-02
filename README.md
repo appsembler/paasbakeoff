@@ -1,7 +1,7 @@
 PaaS bakeoff
 ============
 
-A [Mezzanine](http://mezzanine.jupo.org) site that demonstrates how to deploy Django projects to [several PaaS providers](http://appsembler.com/blog/paas-bakeoff-comparing-stackato-openshift-dotcloud-and-heroku-for-django-hosting-and-deployment/)
+A [Mezzanine](http://mezzanine.jupo.org) project template that demonstrates how to deploy Django projects to [several PaaS providers](http://appsembler.com/blog/paas-bakeoff-comparing-stackato-openshift-dotcloud-and-heroku-for-django-hosting-and-deployment/)
 
 Usage
 =====
@@ -17,13 +17,15 @@ Then checkout the branch for the PaaS provider that you want to deploy to:
 Stackato
 --------
 
-Download the Stackato client and create an account on their sandbox.
+Download the Stackato [client](http://www.activestate.com/stackato/download_client) and create an account on their [sandbox](http://www.activestate.com/stackato/sandbox).
 
 ```
 $ cd paasbakeoff
 $ git checkout stackato
 $ stackato push
 ```
+
+See this [blog post](http://appsembler.com/blog/django-deployment-using-stackato/) for more details about deploying Mezzanine to Stackato.
 
 OpenShift
 ---------
@@ -39,6 +41,8 @@ $ git fetch paasbakeoff
 $ git merge paasbakeoff/openshift
 $ git push
 ```
+
+See this [blog post](http://appsembler.com/blog/django-deployment-using-openshift/) for more details about deploying Mezzanine to OpenShift.
 
 Dotcloud
 --------
