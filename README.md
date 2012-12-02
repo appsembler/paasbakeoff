@@ -12,6 +12,17 @@ First clone the code repository:
 $ git clone git://github.com/appsembler/paasbakeoff.git
 ```
 
+See the different PaaS providers that you can deploy to by looking at the branches:
+
+```
+$ git branch
+* dotcloud
+  heroku
+  master
+  openshift
+  stackato
+```
+
 Then checkout the branch for the PaaS provider that you want to deploy to:
 
 Stackato
