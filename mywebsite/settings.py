@@ -369,7 +369,6 @@ if os.environ.get("RACK_ENV", None) == "production":
     #####################
 
     try:
-        os.environ['SENDGRID_USERNAME']:
         EMAIL_HOST = 'smtp.sendgrid.net'
         EMAIL_HOST_USER = os.environ['SENDGRID_USERNAME']
         EMAIL_HOST_PASSWORD = os.environ['SENDGRID_PASSWORD']
