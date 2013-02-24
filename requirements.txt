@@ -1,9 +1,12 @@
-Django==1.4.2
-Mezzanine==1.2.4
-
-psycopg2==2.4.5
-dj-database-url==0.2.1
-gunicorn==0.15.0
-django-storages==1.1.5
-boto==2.6.0
+Django==1.4.5
+Mezzanine==1.4.2
 South==0.7.6
+psycopg2==2.4.6
+
+# deploying to Heroku
+dj-database-url==0.2.1
+gunicorn==0.17.2
+gevent==0.13.7
+django-storages==1.1.6
+boto==2.8.0
+
