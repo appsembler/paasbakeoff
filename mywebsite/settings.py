@@ -368,7 +368,8 @@ if os.environ.get("RACK_ENV", None) == "production":
     # SENDGRID SETTINGS #
     #####################
 
-    try os.environ['SENDGRID_USERNAME']:
+    try:
+        os.environ['SENDGRID_USERNAME']:
         EMAIL_HOST = 'smtp.sendgrid.net'
         EMAIL_HOST_USER = os.environ['SENDGRID_USERNAME']
         EMAIL_HOST_PASSWORD = os.environ['SENDGRID_PASSWORD']
@@ -377,7 +378,7 @@ if os.environ.get("RACK_ENV", None) == "production":
         DEFAULT_FROM_EMAIL = 'user@domain.com'
     except:
         pass
-        
+
 ##################
 # LOCAL SETTINGS #
 ##################
