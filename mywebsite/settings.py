@@ -74,23 +74,6 @@
 #
 # BLOG_USE_FEATURED_IMAGE = True
 
-# If ``True``, users will be automatically redirected to HTTPS
-# for the URLs specified by the ``SSL_FORCE_URL_PREFIXES`` setting.
-#
-# SSL_ENABLED = True
-
-# Host name that the site should always be accessed via that matches
-# the SSL certificate.
-#
-# SSL_FORCE_HOST = "www.example.com"
-
-# Sequence of URL prefixes that will be forced to run over
-# SSL when ``SSL_ENABLED`` is ``True``. i.e.
-# ('/admin', '/example') would force all URLs beginning with
-# /admin or /example to run over SSL. Defaults to:
-#
-# SSL_FORCE_URL_PREFIXES = ("/admin", "/account")
-
 # If True, the south application will be automatically added to the
 # INSTALLED_APPS setting.
 USE_SOUTH = True
@@ -139,7 +122,7 @@ SITE_ID = 1
 USE_I18N = False
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = "7ee22c5b-0ec7-43ee-88bd-183664dc099f3430e495-2580-4347-be78-4bb72cbe92efacf6b627-56c4-4fcf-99c3-e5566203b7fc"
+SECRET_KEY = "90496fc2-d44f-44ef-bbbe-04d9a031ae47bd7c4ed4-4a94-4a25-867e-69d059bcbe07a0e5886a-7137-4454-89b8-016d743fead4"
 
 # Tuple of IP addresses, as strings, that:
 #   * See debug comments, when DEBUG is true
@@ -292,6 +275,7 @@ MIDDLEWARE_CLASSES = (
     "mezzanine.core.middleware.TemplateForDeviceMiddleware",
     "mezzanine.core.middleware.TemplateForHostMiddleware",
     "mezzanine.core.middleware.AdminLoginInterfaceSelectorMiddleware",
+    "mezzanine.core.middleware.SitePermissionMiddleware",
     # Uncomment the following if using any of the SSL settings:
     # "mezzanine.core.middleware.SSLRedirectMiddleware",
     "mezzanine.pages.middleware.PageMiddleware",
@@ -302,7 +286,6 @@ MIDDLEWARE_CLASSES = (
 # at the moment we are using custom forks of them.
 PACKAGE_NAME_FILEBROWSER = "filebrowser_safe"
 PACKAGE_NAME_GRAPPELLI = "grappelli_safe"
-
 
 #########################
 # OPTIONAL APPLICATIONS #
@@ -342,35 +325,55 @@ DEBUG_TOOLBAR_CONFIG = {"INTERCEPT_REDIRECTS": False}
 #     "ADMIN_PASS": "", # Live admin user password
 # }
 
-# Heroku settings
-
 if os.environ.get("RACK_ENV", None) == "production":
     import dj_database_url
     
     DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
-    INSTALLED_APPS += ("gunicorn",)
+
+    INSTALLED_APPS += ("gunicorn",
+                       "storages")
+
     # from http://offbytwo.com/2012/01/18/deploying-django-to-heroku.html
     # To make it easier to turn DEBUG on and off consider adding the following to your settings.py:
     DEBUG = bool(os.environ.get('DJANGO_DEBUG', ''))
     TEMPLATE_DEBUG = DEBUG
-    # Now you can turn debug on using heroku config:add DJANGO_DEBUG=true 
-    # and turn it off with heroku config:remove DJANGO_DEBUG
+    # Now you can turn debug on using heroku config:add DJANGO_DEBUG=true and turn it off with heroku config:remove DJANGO_DEBUG
+
+    ###################
+    # S3 FILE STORAGE #
+    ###################
+
+    DEFAULT_FILE_STORAGE = "storages.backends.s3boto.S3BotoStorage"
+    STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+
+    AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID", "")
+    AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY", "")
+    AWS_STORAGE_BUCKET_NAME = os.environ.get("AWS_STORAGE_BUCKET_NAME", "")
+
+    AWS_HEADERS = {
+        "Cache-Control": "public, max-age=86400",
+    }
+
+    AWS_S3_FILE_OVERWRITE = False
+    AWS_QUERYSTRING_AUTH = False
+    AWS_S3_SECURE_URLS = False
+    AWS_REDUCED_REDUNDANCY = False
+    AWS_IS_GZIPPED = False
+
+    STATIC_URL = 'http://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/'
+    MEDIA_URL = STATIC_URL + 'media/'
+    ADMIN_MEDIA_PREFIX = STATIC_URL + 'grappelli/'
+
+    #####################
+    # SENDGRID SETTINGS #
+    #####################
 
     EMAIL_HOST = 'smtp.sendgrid.net'
     EMAIL_HOST_USER = os.environ['SENDGRID_USERNAME']
     EMAIL_HOST_PASSWORD = os.environ['SENDGRID_PASSWORD']
     EMAIL_PORT = 587        # 25, 587, 2525 and 465 on ssl
-    EMAIL_USE_TLS = True  
-
-    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-    AWS_STORAGE_BUCKET_NAME = 'mywebsite-files'
-
-    STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-
-    STATIC_URL = 'http://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/'
-    MEDIA_URL = 'http://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/'
+    EMAIL_USE_TLS = True
+    DEFAULT_FROM_EMAIL = 'user@domain.com'
 
 ##################
 # LOCAL SETTINGS #
