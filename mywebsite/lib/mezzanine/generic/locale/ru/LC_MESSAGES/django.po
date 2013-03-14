@@ -1,0 +1,227 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Dmitry Falk <tfalc@mail.ru>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: Mezzanine\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-07-20 14:01+0400\n"
+"PO-Revision-Date: 2012-06-17 16:13+0000\n"
+"Last-Translator: Sebastián Ramírez Magrí <sebasmagri@gmail.com>\n"
+"Language-Team: Russian (http://www.transifex.net/projects/p/mezzanine/"
+"language/ru/)\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+
+#: admin.py:20 models.py:67
+msgid "User"
+msgstr "Пользователь"
+
+#: defaults.py:24
+msgid "Accounts required for commenting"
+msgstr "Требовать учетную запись"
+
+#: defaults.py:25
+msgid "If ``True``, users must log in to comment."
+msgstr ""
+"Если ``Да``, то пользователи должны войти под своей учетной записью, чтобы "
+"иметь возможность оставлять комментарии."
+
+#: defaults.py:32
+msgid "Disqus shortname"
+msgstr "Логин Disqus"
+
+#: defaults.py:33
+msgid "Shortname for the http://disqus.com comments service."
+msgstr "Логин на сервисе комментариев http://disqus.com"
+
+#: defaults.py:41
+msgid "Disqus public key"
+msgstr "Публичный ключ Disqus"
+
+#: defaults.py:42
+msgid "Public key for http://disqus.com developer API"
+msgstr "Публичный ключ API для сервиса комментариев http://disqus.com"
+
+#: defaults.py:49
+msgid "Disqus secret key"
+msgstr "Секретный ключ Disqus"
+
+#: defaults.py:50
+msgid "Secret key for http://disqus.com developer API"
+msgstr "Секретный ключ API для сервиса комментариев http://disqus.com"
+
+#: defaults.py:57
+msgid "Auto-approve comments"
+msgstr "Автоутверждение комментариев"
+
+#: defaults.py:58
+msgid "If ``True``, built-in comments are approved by default."
+msgstr "Если ``Да``, то комментарии утверждаются автоматически."
+
+#: defaults.py:66
+msgid "Admin comments"
+msgstr "Комментарии в панели управления"
+
+#: defaults.py:67
+msgid "Number of latest comments shown in the admin dashboard."
+msgstr "Количество последних комментариев, отображаемых в панели управления."
+
+#: defaults.py:75
+msgid "Show unapproved comments"
+msgstr "Показывать неподтверждённые комментарии"
+
+#: defaults.py:76
+msgid ""
+"If ``True``, comments that have ``is_public`` unchecked will still be "
+"displayed, but replaced with a ``waiting to be approved`` message."
+msgstr ""
+"Если ``Да``, то неопубликованные комментарии будут отображаться, но при этом "
+"будут заменены на надпись ``ожидает подтверждения``"
+
+#: defaults.py:85
+msgid "Show removed comments"
+msgstr "Показывать удалённые комментарии"
+
+#: defaults.py:86
+msgid ""
+"If ``True``, comments that have ``removed`` checked will still be displayed, "
+"but replaced with a ``removed`` message."
+msgstr ""
+"Если ``Да``, то удалённые комментарии продолжат отображаться, но при этом "
+"будут заменены на надпись ``Удалено``"
+
+#: defaults.py:95
+msgid "Min value for a rating."
+msgstr ""
+
+#: defaults.py:102
+msgid "Max value for a rating."
+msgstr ""
+
+#: forms.py:79
+msgid "Name"
+msgstr "Имя"
+
+#: forms.py:79
+msgid "required"
+msgstr "обязательно"
+
+#: forms.py:81
+msgid "Email"
+msgstr "E-mail"
+
+#: forms.py:82
+msgid "required (not published)"
+msgstr "обязательно (не публикуется)"
+
+#: forms.py:83
+msgid "Website"
+msgstr "Веб-сайт"
+
+#: forms.py:83
+msgid "optional"
+msgstr "необязательно"
+
+#: models.py:24
+msgid "By the blog author"
+msgstr "По автору блога"
+
+#: models.py:31 models.py:59
+msgid "Comment"
+msgstr "Комментарий"
+
+#: models.py:32 templates/generic/includes/comments.html:3
+msgid "Comments"
+msgstr "Комментарии"
+
+#: models.py:71
+msgid "View on site"
+msgstr "Посмотреть на сайте"
+
+#: models.py:91
+msgid "Keyword"
+msgstr "Ключевое слово"
+
+#: models.py:92
+msgid "Keywords"
+msgstr "Ключевые слова"
+
+#: models.py:120
+msgid "Value"
+msgstr "Значение"
+
+#: models.py:126
+msgid "Rating"
+msgstr "Рейтинг"
+
+#: models.py:127
+msgid "Ratings"
+msgstr "Рейтинг"
+
+#: views.py:52
+msgid ""
+"You must log in to comment. Please log in or sign up, and your comment will "
+"be posted."
+msgstr ""
+"Вы должны войти под своим именем, чтобы иметь возможность написать "
+"комментарий."
+
+#: templates/admin/includes/recent_comments.html:4
+msgid "Recent Comments"
+msgstr "Последние комментарии"
+
+#: templates/admin/includes/recent_comments.html:22
+#: templates/generic/includes/comment.html:22
+#: templates/generic/includes/comment.html:53
+#: templates/generic/includes/comment.html:63
+msgid "ago"
+msgstr "назад"
+
+#: templates/generic/includes/comment.html:25
+msgid "Link"
+msgstr "Ссылка"
+
+#: templates/generic/includes/comment.html:26
+#: templates/generic/includes/comment.html:36
+msgid "Reply"
+msgstr "Ответ"
+
+#: templates/generic/includes/comment.html:59
+msgid "Comment deleted"
+msgstr "Комментарий удалён"
+
+#: templates/generic/includes/comment.html:61
+msgid "Comment awaiting approval"
+msgstr "Комментарий ожидает подтверждения"
+
+#: templates/generic/includes/comment.html:72
+msgid "There are currently no comments"
+msgstr "Пока комментариев нет"
+
+#: templates/generic/includes/comments.html:16
+msgid "New Comment"
+msgstr "Новый комментарий"
+
+#: templates/generic/includes/comments.html:24
+msgid "Send"
+msgstr "Отправить"
+
+#: templates/generic/includes/rating.html:7
+msgid "Current rating"
+msgstr "Текущий рейтинг"
+
+#: templates/generic/includes/rating.html:9
+msgid "Currently unrated"
+msgstr "Ещё не оценен"
+
+#: templates/generic/includes/rating.html:18
+msgid "Rate"
+msgstr "Оценить"

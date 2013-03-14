@@ -1,0 +1,253 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Christopher R. Parr <fosstux@gmail.com>, 2012.
+# Yassine Elassad <yassine.elassad@gmail.com>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: Mezzanine\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-06-17 10:37-0430\n"
+"PO-Revision-Date: 2012-06-15 10:50+0000\n"
+"Last-Translator: Christopher R. Parr <fosstux@gmail.com>\n"
+"Language-Team: German (http://www.transifex.net/projects/p/mezzanine/language/de/)\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: admin.py:30
+msgid "Meta data"
+msgstr "Metadaten"
+
+#: admin.py:50
+msgid "This field is required if status is set to published."
+msgstr "Dieses Feld wird benötigt, wenn der Status auf Veröffentlicht gesetzt wird."
+
+#: fields.py:36
+#, python-format
+msgid "Could not import the value of settings.RICHTEXT_WIDGET_CLASS: %s"
+msgstr "Konnte den in settings.RICHTEXT_WIDGET_CLASS definierten Modell nicht laden: %s"
+
+#: forms.py:75 models.py:262
+msgid "Order"
+msgstr "Sortierung"
+
+#: models.py:53
+msgid "Title"
+msgstr "Titel"
+
+#: models.py:54
+msgid "URL"
+msgstr "URL"
+
+#: models.py:96
+msgid "View on site"
+msgstr "Auf der Seite ansehen"
+
+#: models.py:106
+msgid "Description"
+msgstr "Beschreibung"
+
+#: models.py:107
+msgid "Generate description"
+msgstr "Beschreibung erzeugem"
+
+#: models.py:108
+msgid "If checked, the description will be automatically generated from content. Uncheck if you want to manually set a custom description."
+msgstr "Wenn aktiviert, wird die Beschreibung automatisch vom Inhalt generiert. Deaktivieren, wenn Sie eine eigene Beschreibung einstellen möchten."
+
+#: models.py:111
+msgid "Keywords"
+msgstr "Schlüsselwöter"
+
+#: models.py:158
+msgid "Draft"
+msgstr "Entwurf"
+
+#: models.py:159
+msgid "Published"
+msgstr "Veröffentlicht"
+
+#: models.py:170
+msgid "Status"
+msgstr "Status"
+
+#: models.py:172 models.py:201
+msgid "Published from"
+msgstr "Veröffentlicht von"
+
+#: models.py:173
+msgid "With published checked, won't be shown until this time"
+msgstr "Wenn Veröffentlicht aktiv ist, wird der Inhalt bis zu diesem Zeitpunkt nicht sichtbar sein"
+
+#: models.py:175
+msgid "Expires on"
+msgstr "Endet am"
+
+#: models.py:176
+msgid "With published checked, won't be shown after this time"
+msgstr "Wenn Veröffentlicht aktiv ist, wird der Inhalt nach diesem Zeitpunkt nicht sichtbar sein"
+
+#: models.py:220
+msgid "Content"
+msgstr "Inhalt"
+
+#: models.py:316
+msgid "Author"
+msgstr "Autor"
+
+#: views.py:77
+msgid "Permission denied"
+msgstr "Zugang verweigert"
+
+#: templates/404.html:6
+msgid "Page not found"
+msgstr "Seite könnte nicht gefunden werden"
+
+#: templates/404.html:10
+msgid "The page you requested does not exist."
+msgstr "Die aufgerufene Seite existiert nicht."
+
+#: templates/500.html:6
+msgid "Error"
+msgstr "Fehler"
+
+#: templates/500.html:10
+msgid "Sorry, an error occurred."
+msgstr "Entschuldigen Sie, ein Fehler trat auf."
+
+#: templates/base.html:60
+msgid "Search"
+msgstr "Suchen"
+
+#: templates/base.html:121
+msgid "Powered by"
+msgstr "Umgesetzt mit"
+
+#: templates/base.html:124
+msgid "and"
+msgstr "und"
+
+#: templates/base.html:130
+msgid "View Mobile Site"
+msgstr "Mobile Seite ansehen"
+
+#: templates/index.html:5 templates/index.html.py:8 templates/index.html:12
+#: templates/search_results.html:10 templates/admin/index.html:15
+msgid "Home"
+msgstr "Startseite"
+
+#: templates/index.html:16
+msgid "This is the homepage."
+msgstr "Das ist die Startseite."
+
+#: templates/search_results.html:5 templates/search_results.html.py:6
+#: templates/search_results.html:13
+msgid "Search Results"
+msgstr "Suchergebnisse"
+
+#: templates/search_results.html:20
+msgid "No results were found matching your query: "
+msgstr "Für diese Suchkriterien wurden keine Einträge gefunden"
+
+#: templates/search_results.html:22
+msgid "Showing"
+msgstr "Anzeige von"
+
+#: templates/search_results.html:22
+msgid "to"
+msgstr "bis"
+
+#: templates/search_results.html:22 templates/includes/pagination.html:8
+msgid "of"
+msgstr "von"
+
+#: templates/search_results.html:23
+msgid "results matching your query:"
+msgstr "Ergebnisse entsprechen Ihrer Abfrage:"
+
+#: templates/search_results.html:32
+msgid "read more"
+msgstr "Weiter lesen"
+
+#: templates/admin/index.html:17 templates/admin/includes/dropdown_menu.html:4
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: templates/admin/login.html:25
+msgid "Username or email:"
+msgstr "Benutzername oder E-Mail"
+
+#: templates/admin/login.html:29
+msgid "Password:"
+msgstr "Passwort"
+
+#: templates/admin/login.html:34
+msgid "Interface:"
+msgstr "Schnittstelle:"
+
+#: templates/admin/login.html:37 templates/includes/editable_toolbar.html:7
+#: templates/includes/editable_toolbar.html:9
+msgid "Admin"
+msgstr "Admin"
+
+#: templates/admin/login.html:40
+msgid "Site"
+msgstr "Seite"
+
+#: templates/admin/login.html:44
+msgid "Log in"
+msgstr "Anmelden"
+
+#: templates/admin/login.html:47
+msgid "Forgot password?"
+msgstr "Passwort vergessen?"
+
+#: templates/admin/includes/app_list.html:20
+msgid "Add"
+msgstr "Hinzufügen"
+
+#: templates/admin/includes/app_list.html:27
+msgid "Change"
+msgstr "Verändern"
+
+#: templates/admin/includes/dynamic_inline_stacked.html:6
+#: templates/admin/includes/dynamic_inline_tabular.html:6
+msgid "Add another"
+msgstr "Weiter hinzufügen"
+
+#: templates/admin/includes/recent_actions.html:4
+msgid "Recent Actions"
+msgstr "Neueste Aktionen"
+
+#: templates/admin/includes/recent_actions.html:5
+msgid "My Actions"
+msgstr "Meine Aktionen"
+
+#: templates/admin/includes/recent_actions.html:9
+msgid "None available"
+msgstr "Keine verfügbar"
+
+#: templates/includes/editable_form.html:16
+msgid "Save"
+msgstr "Speichern"
+
+#: templates/includes/editable_form.html:17
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: templates/includes/editable_form.html:25
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: templates/includes/editable_toolbar.html:11
+msgid "Log out"
+msgstr "Abmelden"
+
+#: templates/includes/pagination.html:8
+msgid "Page"
+msgstr "Seite"
