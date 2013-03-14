@@ -87,6 +87,14 @@ You must create the database from the SQL Prompt of the Google API Console with:
 	CREATE DATABASE mezzdb;
 ```
 
+In settings.py, replace this line::
+
+```
+	'INSTANCE': '<instancename>:<databasename>',
+```
+
+With your own database configuration.
+
 Deploy using either the GoogleAppEngineLauncher app or on the command line. From the paasbakeoff directory::
 
 ```
