@@ -70,7 +70,21 @@ $ dotcloud push
 Heroku
 ------
 
-TODO
+Heroku
+------
+
+Download the [Heroku toolbelt](https://toolbelt.heroku.com/) and create an account on [Heroku](http://heroku.com).
+
+```
+$ cd paasbakeoff
+$ git checkout heroku
+$ heroku create myapp
+$ heroku addons:add heroku-postgresql:dev
+$ git push heroku heroku:master
+$ heroku run python mywebsite/manage.py syncdb
+$ heroku run python mywebsite/manage.py collectstatic
+```
+
 
 If you would like to contribute another PaaS (Gondor, AWS Elastic Beanstalk, Google App Engine, etc), please fork the project and submit a pull request. Thanks!
 
