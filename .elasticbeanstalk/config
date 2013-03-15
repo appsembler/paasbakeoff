@@ -1,0 +1,10 @@
+AwsCredentialFile=/Users/nateaune/.elasticbeanstalk/aws_credential_file
+ApplicationName=pyconmezz
+EnvironmentName=pyconmezz-env
+Region=us-west-1
+ServiceEndpoint=https://elasticbeanstalk.us-west-1.amazonaws.com
+RdsEndpoint=https://rds.us-west-1.amazonaws.com
+SolutionStack=32bit Amazon Linux running Python
+RdsEnabled=Yes
+RdsSourceSnapshotName=
+RdsDeletionPolicy=Delete
