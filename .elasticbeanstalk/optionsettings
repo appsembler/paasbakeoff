@@ -1,5 +1,5 @@
 [aws:elasticbeanstalk:application:environment]
-DJANGO_SETTINGS_MODULE=
+DJANGO_SETTINGS_MODULE=mywebsite.settings
 PARAM1=
 PARAM2=
 PARAM4=
@@ -7,13 +7,10 @@ PARAM3=
 PARAM5=
 
 [aws:elasticbeanstalk:container:python]
-WSGIPath=application.py
+WSGIPath=wsgi.py
 NumProcesses=1
-StaticFiles=/static=
+StaticFiles=/static=/static
 NumThreads=15
-
-[aws:elasticbeanstalk:container:python:staticfiles]
-/static=
 
 [aws:rds:dbinstance]
 DBUser=ebroot
