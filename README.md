@@ -78,7 +78,7 @@ Google App Engine
 On MacOSX, you need to run this command::
 
 ```
-	$ export PYTHONPATH="$PYTHONPATH:/Applications/GoogleAppEngineLauncher.app/Contents/Resources/GoogleAppEngine-default.bundle/Contents/Resources/google_appengine:/Applications/GoogleAppEngineLauncher.app/Contents/Resources/GoogleAppEngine-default.bundle/Contents/Resources/google_appengine/lib/django_1_4"
+	$ export PYTHONPATH="$PYTHONPATH:/usr/local/google_appengine:/usr/local/google_appengine/lib/django_1_4"
 ```
 
 You must create the database from the SQL Prompt of the Google API Console with::
