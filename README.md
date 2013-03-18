@@ -101,8 +101,8 @@ Deploy using either the GoogleAppEngineLauncher app or on the command line. From
 	appcfg.py --oauth2 update .
 ```
 
-Configuring 3rd party libraries
--------------------------------
+More resources
+--------------
 
 * [Configuring libraries](https://developers.google.com/appengine/docs/python/python25/migrate27#Configuring_Libraries)
 
