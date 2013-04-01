@@ -1,0 +1,252 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Nicola Larosa <transifex@teknico.net>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: Mezzanine\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-06-17 10:37-0430\n"
+"PO-Revision-Date: 2012-05-29 18:28+0000\n"
+"Last-Translator: Nicola Larosa <transifex@teknico.net>\n"
+"Language-Team: Italian (http://www.transifex.net/projects/p/mezzanine/language/it/)\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: admin.py:30
+msgid "Meta data"
+msgstr "Metadati"
+
+#: admin.py:50
+msgid "This field is required if status is set to published."
+msgstr "Questo campo è obbligatorio se lo stato è impostato a pubblicato."
+
+#: fields.py:36
+#, python-format
+msgid "Could not import the value of settings.RICHTEXT_WIDGET_CLASS: %s"
+msgstr "Impossibile importare il valore settings.RICHTEXT_WIDGET_CLASS: %s"
+
+#: forms.py:75 models.py:262
+msgid "Order"
+msgstr "Ordine"
+
+#: models.py:53
+msgid "Title"
+msgstr "Title"
+
+#: models.py:54
+msgid "URL"
+msgstr "URL"
+
+#: models.py:96
+msgid "View on site"
+msgstr "Vedi sul sito"
+
+#: models.py:106
+msgid "Description"
+msgstr "Descrizione"
+
+#: models.py:107
+msgid "Generate description"
+msgstr "Genera descrizione"
+
+#: models.py:108
+msgid "If checked, the description will be automatically generated from content. Uncheck if you want to manually set a custom description."
+msgstr "Se selezionato, la descrizione verrà generata automaticamente a partire dal contenuto. Deseleziona se vuoi impostare manualmente una descrizione specifica."
+
+#: models.py:111
+msgid "Keywords"
+msgstr "Parole chiave"
+
+#: models.py:158
+msgid "Draft"
+msgstr "Bozza"
+
+#: models.py:159
+msgid "Published"
+msgstr "Pubblicato"
+
+#: models.py:170
+msgid "Status"
+msgstr "Stato"
+
+#: models.py:172 models.py:201
+msgid "Published from"
+msgstr "Pubblicato da"
+
+#: models.py:173
+msgid "With published checked, won't be shown until this time"
+msgstr "Una volta che \"pubblicato\" è selezionato, non verrà mostrato prima di questo momento"
+
+#: models.py:175
+msgid "Expires on"
+msgstr "Espira il"
+
+#: models.py:176
+msgid "With published checked, won't be shown after this time"
+msgstr "Una volta che \"pubblicato\" è selezionato, non verrà mostrato dopo questo momento"
+
+#: models.py:220
+msgid "Content"
+msgstr "Contenuto"
+
+#: models.py:316
+msgid "Author"
+msgstr "Autore"
+
+#: views.py:77
+msgid "Permission denied"
+msgstr "Permesso negato"
+
+#: templates/404.html:6
+msgid "Page not found"
+msgstr "Pagina non trovata"
+
+#: templates/404.html:10
+msgid "The page you requested does not exist."
+msgstr "La pagina richiesta non esiste."
+
+#: templates/500.html:6
+msgid "Error"
+msgstr "Errore"
+
+#: templates/500.html:10
+msgid "Sorry, an error occurred."
+msgstr "Spiacenti, si è verificato un errore."
+
+#: templates/base.html:60
+msgid "Search"
+msgstr "Cerca"
+
+#: templates/base.html:121
+msgid "Powered by"
+msgstr "Realizzato con"
+
+#: templates/base.html:124
+msgid "and"
+msgstr "e"
+
+#: templates/base.html:130
+msgid "View Mobile Site"
+msgstr "Vedi il sito mobile"
+
+#: templates/index.html:5 templates/index.html.py:8 templates/index.html:12
+#: templates/search_results.html:10 templates/admin/index.html:15
+msgid "Home"
+msgstr "Pagina principale"
+
+#: templates/index.html:16
+msgid "This is the homepage."
+msgstr "Questa è la pagina principale."
+
+#: templates/search_results.html:5 templates/search_results.html.py:6
+#: templates/search_results.html:13
+msgid "Search Results"
+msgstr "Risultati della ricerca"
+
+#: templates/search_results.html:20
+msgid "No results were found matching your query: "
+msgstr "La ricerca non ha prodotto risultati: "
+
+#: templates/search_results.html:22
+msgid "Showing"
+msgstr "Mostrato"
+
+#: templates/search_results.html:22
+msgid "to"
+msgstr "a"
+
+#: templates/search_results.html:22 templates/includes/pagination.html:8
+msgid "of"
+msgstr "di"
+
+#: templates/search_results.html:23
+msgid "results matching your query:"
+msgstr "risultati della ricerca:"
+
+#: templates/search_results.html:32
+msgid "read more"
+msgstr "leggi il resto"
+
+#: templates/admin/index.html:17 templates/admin/includes/dropdown_menu.html:4
+msgid "Dashboard"
+msgstr "Pannello di controllo"
+
+#: templates/admin/login.html:25
+msgid "Username or email:"
+msgstr "Nome utente o email:"
+
+#: templates/admin/login.html:29
+msgid "Password:"
+msgstr "Password:"
+
+#: templates/admin/login.html:34
+msgid "Interface:"
+msgstr "Interfaccia:"
+
+#: templates/admin/login.html:37 templates/includes/editable_toolbar.html:7
+#: templates/includes/editable_toolbar.html:9
+msgid "Admin"
+msgstr "Ammin."
+
+#: templates/admin/login.html:40
+msgid "Site"
+msgstr "Sito"
+
+#: templates/admin/login.html:44
+msgid "Log in"
+msgstr "Accedi"
+
+#: templates/admin/login.html:47
+msgid "Forgot password?"
+msgstr "Password dimenticata?"
+
+#: templates/admin/includes/app_list.html:20
+msgid "Add"
+msgstr "Aggiungi"
+
+#: templates/admin/includes/app_list.html:27
+msgid "Change"
+msgstr "Cambia"
+
+#: templates/admin/includes/dynamic_inline_stacked.html:6
+#: templates/admin/includes/dynamic_inline_tabular.html:6
+msgid "Add another"
+msgstr "Aggiungi un altro"
+
+#: templates/admin/includes/recent_actions.html:4
+msgid "Recent Actions"
+msgstr "Azioni recenti"
+
+#: templates/admin/includes/recent_actions.html:5
+msgid "My Actions"
+msgstr "Le mie azioni"
+
+#: templates/admin/includes/recent_actions.html:9
+msgid "None available"
+msgstr "Nessuno disponibile"
+
+#: templates/includes/editable_form.html:16
+msgid "Save"
+msgstr "Salva"
+
+#: templates/includes/editable_form.html:17
+msgid "Cancel"
+msgstr "Annulla"
+
+#: templates/includes/editable_form.html:25
+msgid "Edit"
+msgstr "Modifica"
+
+#: templates/includes/editable_toolbar.html:11
+msgid "Log out"
+msgstr "Esci"
+
+#: templates/includes/pagination.html:8
+msgid "Page"
+msgstr "Pagina"

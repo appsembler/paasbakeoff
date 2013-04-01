@@ -1,0 +1,12 @@
+application_id: djangodeployermezz
+database: MySQL
+databasename: blah
+django_settings: mywebsite.settings
+instancename: djangomezzanine:djangomezzdb
+media_url: /media/
+project_name: mywebsite
+provider: appengine
+pyversion: Python2.7
+requirements: mywebsite/requirements/project.txt
+sdk_location: /usr/local/google_appengine
+static_url: /static/

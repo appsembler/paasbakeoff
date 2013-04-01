@@ -1,0 +1,4 @@
+
+            [console_scripts]
+            mezzanine-project=mezzanine.bin.mezzanine_project:create_project
+        
