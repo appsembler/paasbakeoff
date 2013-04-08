@@ -4,7 +4,6 @@ try:
 except:
     pass
 
-from settings import *
 
 import os
 import sys
@@ -14,10 +13,13 @@ PROJECT_ROOT = os.path.dirname(__file__)
 on_appengine = os.getenv('SERVER_SOFTWARE','').startswith('Google App Engine')
 
 # insert libraries
-REQUIRE_LIB_PATH = os.path.join(os.path.dirname(__file__), '..', 'env/lib/python2.7/site-packages')
+REQUIRE_LIB_PATH = os.path.join(os.path.dirname(__file__), '..', 'site-packages')
 
 lib_to_insert = [REQUIRE_LIB_PATH]
 map(lambda path: sys.path.insert(0, path), lib_to_insert)
+
+# settings need to be after insertion of libraries' location
+from settings import *
 
 # use cloudsql while on the production
 if (on_appengine or
@@ -28,7 +30,7 @@ if (on_appengine or
         'default': {
             'ENGINE': 'google.appengine.ext.django.backends.rdbms',
             'INSTANCE': 'djangomezzanine:djangomezzdb',
-            'NAME': 'blah',
+            'NAME': 'natemezzanine',
         }
     }
 else:
@@ -71,3 +73,5 @@ MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 
 # use overwriting urls
 ROOT_URLCONF = "mywebsite.urls_appengine"
+
+ALLOWED_HOSTS = ['*']

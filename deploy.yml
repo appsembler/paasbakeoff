@@ -1,6 +1,6 @@
 application_id: djangodeployermezz
 database: MySQL
-databasename: blah
+databasename: ddeployer
 django_settings: mywebsite.settings
 instancename: djangomezzanine:djangomezzdb
 media_url: /media/
