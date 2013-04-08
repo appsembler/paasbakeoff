@@ -1,0 +1,253 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Olav  <>, 2012.
+# Olav Lindekleiv <>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: Mezzanine\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-06-17 10:37-0430\n"
+"PO-Revision-Date: 2012-05-26 18:09+0000\n"
+"Last-Translator: Sebastián Ramírez Magrí <sebasmagri@gmail.com>\n"
+"Language-Team: Norwegian Bokmål (http://www.transifex.net/projects/p/mezzanine/language/nb/)\n"
+"Language: nb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: admin.py:30
+msgid "Meta data"
+msgstr "Metadata"
+
+#: admin.py:50
+msgid "This field is required if status is set to published."
+msgstr ""
+
+#: fields.py:36
+#, python-format
+msgid "Could not import the value of settings.RICHTEXT_WIDGET_CLASS: %s"
+msgstr "Kunne ikke importere verdi for settings.RICHTEXT_WIDGET_CLASS:%s"
+
+#: forms.py:75 models.py:262
+msgid "Order"
+msgstr "Rekkefølge"
+
+#: models.py:53
+msgid "Title"
+msgstr "Tittel"
+
+#: models.py:54
+msgid "URL"
+msgstr "URL"
+
+#: models.py:96
+msgid "View on site"
+msgstr "Vis på siden"
+
+#: models.py:106
+msgid "Description"
+msgstr "Beskrivelse"
+
+#: models.py:107
+msgid "Generate description"
+msgstr "Generer beskrivelse"
+
+#: models.py:108
+msgid "If checked, the description will be automatically generated from content. Uncheck if you want to manually set a custom description."
+msgstr "Hvis dette er valgt vil en beskrivelse automatisk bli generert ut fra innholdet. Hvis ikke, kan du velge en egen beskrivelse."
+
+#: models.py:111
+msgid "Keywords"
+msgstr "Nøkkelord"
+
+#: models.py:158
+msgid "Draft"
+msgstr "Kladd"
+
+#: models.py:159
+msgid "Published"
+msgstr "Publisert"
+
+#: models.py:170
+msgid "Status"
+msgstr "Status"
+
+#: models.py:172 models.py:201
+msgid "Published from"
+msgstr "Publisert fra"
+
+#: models.py:173
+msgid "With published checked, won't be shown until this time"
+msgstr "Hvis publisert er valgt vil den ikke vises før dette tidspunktet"
+
+#: models.py:175
+msgid "Expires on"
+msgstr "Utløper"
+
+#: models.py:176
+msgid "With published checked, won't be shown after this time"
+msgstr "Hvis publisert er valgt vil den ikke vises etter dette tidspunktet"
+
+#: models.py:220
+msgid "Content"
+msgstr "Innhold"
+
+#: models.py:316
+msgid "Author"
+msgstr "Forfatter"
+
+#: views.py:77
+msgid "Permission denied"
+msgstr "Manglende rettigheter"
+
+#: templates/404.html:6
+msgid "Page not found"
+msgstr "Finner ikke siden"
+
+#: templates/404.html:10
+msgid "The page you requested does not exist."
+msgstr "Siden du leter etter eksisterer ikke."
+
+#: templates/500.html:6
+msgid "Error"
+msgstr "Feil"
+
+#: templates/500.html:10
+msgid "Sorry, an error occurred."
+msgstr "Beklager, en feil har oppstått."
+
+#: templates/base.html:60
+msgid "Search"
+msgstr "Søk"
+
+#: templates/base.html:121
+msgid "Powered by"
+msgstr "Drevet av"
+
+#: templates/base.html:124
+msgid "and"
+msgstr "og"
+
+#: templates/base.html:130
+msgid "View Mobile Site"
+msgstr "Vis mobilversjon"
+
+#: templates/index.html:5 templates/index.html.py:8 templates/index.html:12
+#: templates/search_results.html:10 templates/admin/index.html:15
+msgid "Home"
+msgstr "Hjem"
+
+#: templates/index.html:16
+msgid "This is the homepage."
+msgstr "Dette er forsiden."
+
+#: templates/search_results.html:5 templates/search_results.html.py:6
+#: templates/search_results.html:13
+msgid "Search Results"
+msgstr "Søkeresultater"
+
+#: templates/search_results.html:20
+msgid "No results were found matching your query: "
+msgstr "Ingen resultater ble funnet i søket: "
+
+#: templates/search_results.html:22
+msgid "Showing"
+msgstr "Viser"
+
+#: templates/search_results.html:22
+msgid "to"
+msgstr "til"
+
+#: templates/search_results.html:22 templates/includes/pagination.html:8
+msgid "of"
+msgstr "av"
+
+#: templates/search_results.html:23
+msgid "results matching your query:"
+msgstr "resultater fra ditt søk:"
+
+#: templates/search_results.html:32
+msgid "read more"
+msgstr "les mer"
+
+#: templates/admin/index.html:17 templates/admin/includes/dropdown_menu.html:4
+msgid "Dashboard"
+msgstr "Dashbord"
+
+#: templates/admin/login.html:25
+msgid "Username or email:"
+msgstr "Brukernavn eller epost:"
+
+#: templates/admin/login.html:29
+msgid "Password:"
+msgstr "Passord:"
+
+#: templates/admin/login.html:34
+msgid "Interface:"
+msgstr "Grensesnitt:"
+
+#: templates/admin/login.html:37 templates/includes/editable_toolbar.html:7
+#: templates/includes/editable_toolbar.html:9
+msgid "Admin"
+msgstr "Administrator"
+
+#: templates/admin/login.html:40
+msgid "Site"
+msgstr "Side"
+
+#: templates/admin/login.html:44
+msgid "Log in"
+msgstr "Logg inn"
+
+#: templates/admin/login.html:47
+msgid "Forgot password?"
+msgstr "Glemt passord?"
+
+#: templates/admin/includes/app_list.html:20
+msgid "Add"
+msgstr "Legg til"
+
+#: templates/admin/includes/app_list.html:27
+msgid "Change"
+msgstr "Endre"
+
+#: templates/admin/includes/dynamic_inline_stacked.html:6
+#: templates/admin/includes/dynamic_inline_tabular.html:6
+msgid "Add another"
+msgstr "Legg til ny"
+
+#: templates/admin/includes/recent_actions.html:4
+msgid "Recent Actions"
+msgstr "Siste handlinger"
+
+#: templates/admin/includes/recent_actions.html:5
+msgid "My Actions"
+msgstr "Mine handlinger"
+
+#: templates/admin/includes/recent_actions.html:9
+msgid "None available"
+msgstr "Ingen tilgjengelig"
+
+#: templates/includes/editable_form.html:16
+msgid "Save"
+msgstr "Lagre"
+
+#: templates/includes/editable_form.html:17
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: templates/includes/editable_form.html:25
+msgid "Edit"
+msgstr "Endre"
+
+#: templates/includes/editable_toolbar.html:11
+msgid "Log out"
+msgstr "Logg ut"
+
+#: templates/includes/pagination.html:8
+msgid "Page"
+msgstr "Side"
