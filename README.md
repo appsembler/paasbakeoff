@@ -70,9 +70,6 @@ $ dotcloud push
 Heroku
 ------
 
-Heroku
-------
-
 Download the [Heroku toolbelt](https://toolbelt.heroku.com/) and create an account on [Heroku](http://heroku.com).
 
 ```
